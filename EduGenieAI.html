@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///C:/Users/pc/Documents/edugenieai/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenieAI</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eef2ff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px #cccccc;
+        }
+
+        h1 {
+            color: #3f51b5;
+        }
+
+        p {
+            color: #555555;
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px;
+            padding: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background-color: #3f51b5;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #303f9f;
+        }
+
+        #answer {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f1f3ff;
+            border-radius: 8px;
+            text-align: left;
+            min-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>EduGenieAI</h1>
+
+        <p>Smart Learning Assistant</p>
+
+        <textarea id="question" placeholder="Enter your question here..."></textarea>
+
+        <br>
+
+        <button onclick="getAnswer()">Ask AI</button>
+
+        <div id="answer"><b>Answer:</b><br>HTML stands for HyperText Markup Language. It is used to create the structure of web pages.</div>
+
+    </div>
+
+    <script>
+
+        function getAnswer() {
+
+            var question =
+                document.getElementById("question").value
+                .toLowerCase()
+                .trim();
+
+            var answer =
+                document.getElementById("answer");
+
+            if (question === "") {
+
+                answer.innerHTML =
+                    "Please enter a question.";
+
+            } else if (question.includes("java")) {
+
+                answer.innerHTML =
+                    "<b>Answer:</b><br>" +
+                    "Java is a high-level, object-oriented " +
+                    "programming language used to develop " +
+                    "many types of applications.";
+
+            } else if (question.includes("html")) {
+
+                answer.innerHTML =
+                    "<b>Answer:</b><br>" +
+                    "HTML stands for HyperText Markup Language. " +
+                    "It is used to create the structure of web pages.";
+
+            } else if (
+                question.includes("ai") ||
+                question.includes("artificial intelligence")
+            ) {
+
+                answer.innerHTML =
+                    "<b>Answer:</b><br>" +
+                    "Artificial Intelligence (AI) is a technology " +
+                    "that enables computers to perform tasks " +
+                    "that normally require human intelligence.";
+
+            } else if (question.includes("computer")) {
+
+                answer.innerHTML =
+                    "<b>Answer:</b><br>" +
+                    "A computer is an electronic device that " +
+                    "accepts data, processes it, and produces " +
+                    "useful information.";
+
+            } else {
+
+                answer.innerHTML =
+                    "<b>Answer:</b><br>" +
+                    "This is a demo version of EduGenieAI. " +
+                    "Try asking about Java, HTML, AI, or computers.";
+
+            }
+        }
+
+    </script>
+
+
+
+</body></html>
